@@ -5,7 +5,7 @@ import TicketCard from "./TicketCard";
 export default function Home() {
   return (
     <main>
-      <div className="m-auto w-3/5 pt-4">
+      <div className="flex flex-col gap-4 m-auto w-3/5 pt-8">
         {/* Page Headers */}
         <div className="flex justify-between">
           <PageTitle />
