@@ -10,9 +10,9 @@ export default function TicketCard({ title, description, priorityLevel }) {
 
   return (
     <div className="flex justify-between bg-white p-4 rounded-md items-center">
-      <div>
+      <div className="w-3/4">
         <h2 className="font-semibold">{title}</h2>
-        <p className="text-sm">{description}</p>
+        <p className="text-sm truncate">{description}</p>
       </div>
       <div className={priorityClassValue + " px-2 py-1 rounded-md"}>
         {
