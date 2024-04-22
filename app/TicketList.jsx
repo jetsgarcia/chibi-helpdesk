@@ -3,6 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 
 // Components
 import TicketCard from "./TicketCard";
+import Link from "next/link";
 
 async function getDocuments(collectionName) {
   try {
@@ -23,12 +24,13 @@ export default async function TicketList() {
   return (
     <div className="flex flex-col gap-3">
       {allTickets.map((ticket) => (
-        <TicketCard
-          key={ticket.id}
-          title={ticket.title}
-          description={ticket.description}
-          priorityLevel={ticket.priorityLevel}
-        />
+        <Link key={ticket.id} href={`/tickets/${ticket.id}`}>
+          <TicketCard
+            title={ticket.title}
+            description={ticket.description}
+            priorityLevel={ticket.priorityLevel}
+          />
+        </Link>
       ))}
     </div>
   );
