@@ -1,0 +1,12 @@
+{
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorSurroundingLines": 0,
+  "editor.formatOnSave": true,
+  "workbench.activityBar.location": "default",
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+  "workbench.tips.enabled": true,
+  "workbench.tree.enableStickyScroll": false
+}
