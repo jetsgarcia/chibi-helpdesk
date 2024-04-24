@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
 import db from "@/lib/firebase/firestore";
+import { useRouter } from "next/navigation";
 
 // Components
 import { Input } from "@/components/ui/input";
@@ -19,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function TicketForm() {
+  const router = useRouter();
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
   const [priority, setPriority] = useState("low");
@@ -42,6 +44,8 @@ export default function TicketForm() {
     setTitle("");
     setDetails("");
     setPriority("low");
+
+    router.push("/");
   };
 
   return (
