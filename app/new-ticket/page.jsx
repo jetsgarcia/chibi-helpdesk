@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
-import db from "@/lib/firebase/firestore";
+import db from "@/lib/firebase/firestore/firestore";
 import { useRouter } from "next/navigation";
 
 // Components

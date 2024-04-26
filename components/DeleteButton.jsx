@@ -1,7 +1,7 @@
 "use client";
 
 import { doc, deleteDoc } from "firebase/firestore";
-import db from "../lib/firebase/firestore";
+import db from "../lib/firebase/firestore/firestore";
 
 import { Button } from "./ui/button";
 import DeleteIcon from "./DeleteIcon";

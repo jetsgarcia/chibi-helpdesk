@@ -1,5 +1,5 @@
 import { doc, getDoc } from "firebase/firestore";
-import db from "../../../lib/firebase/firestore";
+import db from "../../../lib/firebase/firestore/firestore";
 
 // Components
 import Link from "next/link";

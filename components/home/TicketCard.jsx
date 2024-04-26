@@ -1,5 +1,6 @@
 export default function TicketCard({ title, description, priorityLevel }) {
-  let priorityClassValue;
+  let priorityClassValue; // This will be the value of the class of this component
+
   if (priorityLevel === "low") {
     priorityClassValue = "bg-green-100 text-green-800";
   } else if (priorityLevel === "medium") {
