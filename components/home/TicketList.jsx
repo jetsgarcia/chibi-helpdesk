@@ -1,11 +1,17 @@
-import getAllDocuments from "@/lib/firebase/firestore/getAllDocuments";
+"use client";
+
+import listenForDocuments from "@/lib/firebase/firestore/getAllDocuments";
 
 // Components
 import TicketCard from "./TicketCard";
 import Link from "next/link";
+import { useState } from "react";
 
-export default async function TicketList() {
-  const allTickets = await getAllDocuments("tickets");
+export default function TicketList() {
+  const [allTickets, setAllTickets] = useState({});
+  const unsubscribe = listenForDocuments("tickets", (allTickets) => {
+    setAllTickets(allTickets);
+  });
 
   return (
     <div className="flex flex-col gap-3">
