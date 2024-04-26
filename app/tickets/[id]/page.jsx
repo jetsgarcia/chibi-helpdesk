@@ -1,8 +1,9 @@
 import getSingleDocument from "@/lib/firebase/firestore/getSingleDocument";
+
 // Components
 import Link from "next/link";
-import EditButton from "@/components/EditButton";
-import DeleteButton from "@/components/DeleteButton";
+import EditButton from "@/components/tickets/EditButton";
+import DeleteButton from "@/components/tickets/DeleteButton";
 
 export default async function TicketDetails({ params }) {
   const [returnedData] = await getSingleDocument(params.id);
