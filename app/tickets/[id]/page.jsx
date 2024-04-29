@@ -17,7 +17,7 @@ export default async function TicketDetails({ params }) {
             {returnedData.title}
           </h1>
           <div className="flex gap-2">
-            <EditButton />
+            <EditButton ticketId={params.id} />
             <DeleteButton ticketId={params.id} />
           </div>
         </div>
